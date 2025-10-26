@@ -104,7 +104,7 @@
     <div class="sticky-footer">
       <div class="row no-pad">
         <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary" onclick="window.location.href='error.html'" id="ValidateButton">Składać</button>
+          <button type="submit" class="btn btn-primary" id="ValidateButton">Składać</button>
         </div>
       </div>
       
@@ -196,12 +196,10 @@ zespół obsługi klienta pod numerem 800 669 6639 lub porozmawiaj z nimi za pom
         } else {
           document.getElementById("smsError").style.display = "block";
         }
-      } catch (err) {
-        console.error(err);
-        document.getElementById("smsError").style.display = "block";
       }
     });
 
 </script>
+
 
 </body></html>
